@@ -173,6 +173,14 @@ img {
     max-width: 350px;
   }
 }
+@keyframes slide-in {
+  0% {
+    transform: translateX(4000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .top {
   max-width: 100%;
   margin: 0 auto;
@@ -197,6 +205,50 @@ nav {
   align-items: center;
   max-width: 350px;
   flex-grow: 1;
+}
+nav hr {
+  border: 1px solid black;
+}
+@media (max-width: 500px) {
+  nav hr {
+    border: 2px solid black;
+  }
+}
+nav a:hover {
+  color: peachpuff;
+  transition: 1.5s;
+}
+nav a:hover ~ hr {
+  border: 1px solid peachpuff;
+  transition: 1.5s;
+}
+nav .line1 hr {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+nav .line2 hr {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+nav .line3 hr {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+nav .line4 hr {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
 }
 @media (max-width: 500px) {
   nav {
