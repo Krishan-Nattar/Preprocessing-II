@@ -1,1 +1,27 @@
 // Mixins in here
+
+.mix-flex(@just, @align){
+    display:flex;
+    justify-content: @just;
+    align-items: @align;
+}
+
+.new-button(@back-color){
+    background-color: @back-color;
+    color: @white;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    .mix-flex(center, center);
+
+}
+
+.slider(@duration, @delay){
+    animation-name: slide-in;
+    animation-duration: @duration;
+    animation-timing-function: ease;
+    animation-delay: @delay;
+    animation-fill-mode: backwards;
+}
+
